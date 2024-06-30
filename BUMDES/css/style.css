@@ -101,10 +101,10 @@
     text-transform: uppercase;
   }
   header .head-title h1{
-    font-size: 75px;
+    font-size: 60px;
     font-weight: bold;
-    margin-bottom: 30px;
-    line-height: 110px;
+    margin-bottom: 20px;
+    line-height: 80px;
   }
   header .head-title h1 span{
     /* color: var(--satu); */
@@ -243,6 +243,9 @@
     max-width: 700px;
   }
 
+  .content3-about ul{
+    margin-left:20px;
+  }
   .content4{
     margin: 50px 80px;
     text-align: center;
