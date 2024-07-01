@@ -6,7 +6,7 @@
   <link rel="icon" type="image/png" href="img/logo.png">
   <title>BUMDES</title>
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -103,22 +103,22 @@
         kesejahteraan dan transparansi melalui
         solusi keuangan digital terdepan serta mempermudah akses dan pengelolaan dana secara efektif dan efisien.</p>
         <div class="content3-about-part">
-            <div class="benefit-fhirst">
-              <ul class="benefits">
-                <li><img src="../BUMDES/img/Group 41.png" alt=""> Efisiensi Pengelolaan Keuangan</li>
-                <li><img src="../BUMDES/img/Group 41.png" alt=""> Transparansi Real-Time</li>
-                <li><img src="../BUMDES/img/Group 41.png" alt=""> Akuntabilitas Tinggi</li>
-                <li><img src="../BUMDES/img/Group 41.png" alt=""> Keamanan Data yang Terjamin</li>
-              </ul>
-            </div>
-            <div class="benefit-second">
-              <ul class="benefits">
-                <li><img src="../BUMDES/img/Group 41.png" alt=""> Meningkatkan Perekonomian Desa</li>
-                <li><img src="../BUMDES/img/Group 41.png" alt=""> Memberdayakan Sumber Daya Lokal</li>
-                <li><img src="../BUMDES/img/Group 41.png" alt=""> Mengoptimalkan Potensi Desa</li>
-                <li><img src="../BUMDES/img/Group 41.png" alt=""> Mendukung Kemandirian Desa</li>
-              </ul>
-            </div>
+          <div class="benefit-fhirst">
+            <ul class="benefits">
+                <li><i class="fas fa-check-circle"></i> Efisiensi Pengelolaan Keuangan</li>
+                <li><i class="fas fa-check-circle"></i> Transparansi Real-Time</li>
+                <li><i class="fas fa-check-circle"></i> Akuntabilitas Tinggi</li>
+                <li><i class="fas fa-check-circle"></i> Keamanan Data yang Terjamin</li>
+            </ul>
+        </div>
+        <div class="benefit-second">
+            <ul class="benefits">
+                <li><i class="fas fa-check-circle"></i> Meningkatkan Perekonomian Desa</li>
+                <li><i class="fas fa-check-circle"></i> Memberdayakan Sumber Daya Lokal</li>
+                <li><i class="fas fa-check-circle"></i> Mengoptimalkan Potensi Desa</li>
+                <li><i class="fas fa-check-circle"></i> Mendukung Kemandirian Desa</li>
+            </ul>
+        </div>
         </div>
     </div>
   </div>
@@ -193,6 +193,54 @@
       var navbarMenu = document.getElementById('navbarMenu');
       navbarMenu.classList.toggle('active');
     });
+  </script>
+
+  <!-- untuk content 2 -->
+  <script>document.addEventListener("DOMContentLoaded", function() {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1
+    };
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+  
+    const content2 = document.querySelector('.content2');
+    const cardItems = document.querySelectorAll('.content2-card .card-item');
+  
+    observer.observe(content2);
+    cardItems.forEach(cardItem => observer.observe(cardItem));
+  });
+  </script>
+
+  <!-- untuk kontent 3 -->
+  <script>document.addEventListener("DOMContentLoaded", function() {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1
+    };
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+  
+    const content3 = document.querySelector('.content3');
+  
+    observer.observe(content3);
+  });
   </script>
 
   <!-- icon -->
